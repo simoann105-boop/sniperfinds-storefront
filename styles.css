@@ -227,6 +227,63 @@ h2 { margin: 0 0 16px; font-size: 32px; }
 .faq summary { cursor: pointer; font-weight: 800; }
 .faq p { color: var(--muted); }
 
+.waitlist-layout {
+  min-height: calc(100vh - 72px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+  align-items: center;
+  gap: 48px;
+  padding: 56px 0;
+}
+
+.waitlist-proof {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.waitlist-proof span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.waitlist-form {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.waitlist-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.waitlist-form input,
+.waitlist-form select,
+.waitlist-form textarea {
+  width: 100%;
+  min-height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+}
+
+.waitlist-form textarea { resize: vertical; }
+.form-note, .form-success { margin: 0; color: var(--muted); font-size: 14px; }
+.form-success { color: var(--accent); font-weight: 800; }
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -245,7 +302,8 @@ footer {
   .lead { font-size: 18px; }
   .hero-media { min-height: 380px; }
   .proof-band,
-  .content-grid { grid-template-columns: 1fr; }
+  .content-grid,
+  .waitlist-layout { grid-template-columns: 1fr; }
   .offer { align-items: flex-start; flex-direction: column; }
   footer { flex-direction: column; }
 }
