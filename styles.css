@@ -528,6 +528,13 @@ h2 { margin: 0 0 16px; font-size: 32px; }
   padding: 56px 0;
 }
 
+.status-page {
+  min-height: calc(100vh - 112px);
+  display: grid;
+  align-content: center;
+  padding: 72px 0;
+}
+
 .waitlist-proof {
   margin-top: 28px;
   padding: 18px;
