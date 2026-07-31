@@ -145,6 +145,24 @@ h2 { margin: 0 0 16px; font-size: 32px; }
   margin-right: 8px;
 }
 
+.trust-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.trust-strip span {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .hero-media {
   position: relative;
   min-height: 520px;
@@ -286,6 +304,64 @@ h2 { margin: 0 0 16px; font-size: 32px; }
   padding: 14px 16px;
   border-left: 4px solid var(--warm);
   background: #fffaf0;
+}
+
+.trust-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.86fr) minmax(360px, 1.14fr);
+  gap: 32px;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+.trust-panel p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.unit-economics,
+.quality-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.unit-economics {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.unit-economics div,
+.quality-grid div {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.unit-economics span,
+.quality-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.unit-economics strong,
+.quality-grid strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.quality-grid {
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 0 56px;
+}
+
+.quality-grid p {
+  margin: 10px 0 0;
+  color: var(--muted);
 }
 
 .offer {
@@ -442,6 +518,9 @@ footer {
   .asset-note { grid-column: auto; margin: -18px 0 0; }
   .proof-band,
   .content-grid,
+  .trust-panel,
+  .unit-economics,
+  .quality-grid,
   .steps,
   .comparison,
   .comparison-grid,
