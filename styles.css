@@ -378,6 +378,67 @@ h2 { margin: 0 0 16px; font-size: 32px; }
 }
 .metric-label { display: block; color: var(--muted); font-size: 13px; margin-bottom: 8px; }
 
+.signal-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1.2fr);
+  gap: 24px;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+.signal-panel p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.signal-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.signal-stats div,
+.review-strip article {
+  padding: 18px;
+  border: 1px solid rgba(8, 120, 95, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(30, 35, 31, 0.06);
+}
+
+.signal-stats span,
+.review-strip span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.signal-stats strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 28px;
+}
+
+.review-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.review-strip p {
+  margin: 0 0 12px;
+  color: #314039;
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.review-strip .empty-review {
+  grid-column: 1 / -1;
+}
+
 .content-grid {
   display: grid;
   grid-template-columns: 1fr 420px;
@@ -629,6 +690,9 @@ footer {
   .asset-note { grid-column: auto; margin: -18px 0 0; }
   .proof-band,
   .image-gallery,
+  .signal-panel,
+  .signal-stats,
+  .review-strip,
   .content-grid,
   .trust-panel,
   .unit-economics,
