@@ -605,6 +605,113 @@ h2 { margin: 0 0 16px; font-size: 32px; }
   padding: 56px 0;
 }
 
+.collection-hero {
+  padding: 56px 0 28px;
+}
+
+.collection-grid {
+  display: grid;
+  gap: 18px;
+  padding: 0 0 72px;
+}
+
+.collection-card {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+  gap: 22px;
+  padding: 18px;
+  border: 1px solid rgba(8, 120, 95, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 16px 44px rgba(30, 35, 31, 0.08);
+}
+
+.collection-image {
+  position: relative;
+  min-height: 330px;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--paper);
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.collection-image strong {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 14px 34px rgba(255, 77, 20, 0.28);
+}
+
+.collection-copy {
+  display: grid;
+  align-content: center;
+  gap: 14px;
+  padding: 8px 8px 8px 0;
+}
+
+.collection-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.collection-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.collection-tags span {
+  padding: 7px 9px;
+  border-radius: 8px;
+  background: var(--soft);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.collection-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.collection-stats div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.collection-stats span,
+.collection-stats small {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.collection-stats strong {
+  display: block;
+  margin: 4px 0;
+  font-size: 22px;
+}
+
 .status-page {
   min-height: calc(100vh - 112px);
   display: grid;
@@ -838,9 +945,13 @@ footer {
   .steps,
   .comparison,
   .comparison-grid,
+  .collection-card,
+  .collection-stats,
   .board-summary,
   .trend-stats,
   .waitlist-layout { grid-template-columns: 1fr; }
+  .collection-copy { padding: 0; }
+  .collection-image { min-height: 260px; }
   .trend-rank { position: static; }
   .trend-card h2 { padding-right: 0; }
   .trend-verdict { align-items: flex-start; flex-direction: column; }
